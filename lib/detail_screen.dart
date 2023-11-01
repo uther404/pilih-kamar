@@ -34,15 +34,15 @@ class DetailMobilePage extends StatelessWidget {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Kamar di Pesan'),
-          content: Text('Silahkan Konfirmasi di Resepsionis Kotel'),
+          title: const Text('Kamar di Pesan'),
+          content: const Text('Silahkan Konfirmasi di Resepsionis Kotel'),
           actions: <Widget>[
             TextButton(
-              child: Text('Tutup pesan'),
+              child: const Text('Tutup pesan'),
               onPressed: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => MyApp(),
+                  builder: (context) => const MyApp(),
                 ));
               },
             ),
@@ -165,7 +165,7 @@ class DetailMobilePage extends StatelessWidget {
               onPressed: () {
                 _showBookingDialog(context);
               },
-              child: Text('Pesan Kamar'),
+              child: const Text('Pesan Kamar'),
             ),
           ],
         ),
@@ -191,15 +191,15 @@ class _DetailWebPageState extends State<DetailWebPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Kamar di Pesan'),
-          content: Text('Silahkan Konfirmasi di Resepsionis Kotel'),
+          title: const Text('Kamar di Pesan'),
+          content: const Text('Silahkan Konfirmasi di Resepsionis Kotel'),
           actions: <Widget>[
             TextButton(
-              child: Text('Tutup pesan'),
+              child: const Text('Tutup pesan'),
               onPressed: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => MyApp(),
+                  builder: (context) => const MyApp(),
                 ));
               },
             ),
@@ -223,10 +223,9 @@ class _DetailWebPageState extends State<DetailWebPage> {
             builder: (context, constraints) {
               final screenWidth = constraints.maxWidth;
 
-              // Determine the width for the content area based on the screen size.
               double contentWidth = screenWidth <= 1200 ? screenWidth : 1200;
 
-              return Container(
+              return SizedBox(
                 width: contentWidth,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -243,13 +242,12 @@ class _DetailWebPageState extends State<DetailWebPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Expanded(
-                          flex: 2, // Adjust this flex value as needed
+                          flex: 2,
                           child: Column(
                             children: [
                               ClipRRect(
-                                child: Image.network(widget
-                                    .place.imageUrls[0]), // Use the first URL
                                 borderRadius: BorderRadius.circular(10),
+                                child: Image.network(widget.place.imageUrls[0]),
                               ),
                               const SizedBox(height: 16),
                               Scrollbar(
@@ -276,7 +274,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
                         ),
                         const SizedBox(width: 32),
                         Expanded(
-                          flex: 3, // Adjust this flex value as needed
+                          flex: 3,
                           child: Card(
                             child: Container(
                               padding: const EdgeInsets.all(16),
@@ -345,7 +343,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
                                     onPressed: () {
                                       _showBookingDialog(context);
                                     },
-                                    child: Text('Pesan Kamar'),
+                                    child: const Text('Pesan Kamar'),
                                   ),
                                 ],
                               ),

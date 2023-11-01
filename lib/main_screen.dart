@@ -12,7 +12,7 @@ class MainScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: const Text('Aplikasi Pemilihan Kamar'),
-            backgroundColor: Color.fromARGB(255, 65, 65, 65),
+            backgroundColor: const Color.fromARGB(255, 65, 65, 65),
           ),
           body: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
